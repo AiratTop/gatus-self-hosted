@@ -6,6 +6,13 @@ alerting:
   telegram:
     token: ${TELEGRAM_BOT_TOKEN}
     id: ${TELEGRAM_USER_ID}
+  email:
+    from: "Status <${SMTP_USER}>"
+    username: ${SMTP_USER}
+    password: ${SMTP_PWD}
+    host: ${SMTP_HOST}
+    port: ${SMTP_PORT}
+    to: ${TO_EMAIL}
 
 #security:
 #  basic:
@@ -33,6 +40,8 @@ endpoints:
     alerts:
       - type: telegram
         send-on-resolved: true
+      - type: email
+        send-on-resolved: true
 
   - name: monitoring
     group: internal
@@ -42,6 +51,8 @@ endpoints:
       - "[STATUS] == 200"
     alerts:
       - type: telegram
+        send-on-resolved: true
+      - type: email
         send-on-resolved: true
 
   - name: example-dns-query

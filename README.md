@@ -28,6 +28,7 @@ This repository provides a Docker Compose setup for running a self-hosted [Gatus
 
 3.  **Configure the environment:**
     Create a `.env` file and set the `PSQL_PWD` variable for your PostgreSQL database password.
+    You can use my Open Source [password generator](https://pass.airat.top) to create a strong password.
 
 4.  **Start the service:**
     ```bash

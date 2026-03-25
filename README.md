@@ -4,6 +4,8 @@
 
 This repository provides a Docker Compose setup for running a self-hosted [Gatus](https://github.com/TwiN/gatus) instance, a beautiful and automated service health dashboard.
 
+Live site: https://status.airat.top
+
 ## Features
 
 - **Works out of the box:** Just configure the `.env` file and run the start script.
